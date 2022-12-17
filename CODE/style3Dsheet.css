@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+.nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+    }
+.nav a {
+    text-decoration: none;
+    position: relative;
+    top: -250px;
+    display: inline-block;
+    color: #fff;
+    font-size: 30px;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    padding: 14px 70px;
+    text-shadow: 1px 1px 10px rgb(0, 0, 0);
+    margin-top: 20px;
+    font-family: 'Poppins', sans-serif;
+    transition: 0.5s;
+}
+.nav a:hover {
+    text-shadow: none;
+}
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.socialMedia {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.sci {
+    position: relative;
+    display: flex;
+}
+
+.sci li::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,calc(-50% + 120px));
+    font-size: 14vw;
+    pointer-events: none;
+    font-weight: 700;
+    transition: 1s;
+    opacity: 0;
+}
+.sci li:hover::before {
+    opacity:0.1;
+    transform: translate(-50%,calc(-50% + 150px));
+}
+.sci li {
+    list-style: none;
+}
+.sci li a {
+    position: relative;
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    border-radius: 10px;
+    text-decoration: none;
+    margin: 20px;
+    font-size: 4em;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    box-shadow: 0 25px 35px rgba(0,0,0,0.25);
+    transition: background 3s;
+}
+
+.sci li a:hover.youtube {
+    background-color: red;
+}
+.sci li a:hover.instagram {
+    background-color: #fc17fc;
+}
+
+.sci li a:hover.spotify {
+    background-color: #0fff06;
+}
+
+.sci li a .fa {
+    transition: 0.25s;
+    pointer-events: none;
+}
+.sci li a:hover .fa {
+    color: white;
+
+}

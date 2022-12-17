@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+body {
+    margin: 0px;
+    padding: 0;   
+}
+
+/*  Navigator  */
+
+.hero {
+    z-index: 2;
+}
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    padding: 20px 0px;
+}
+.nav ul {
+    flex: 1;
+    text-align: right;
+    padding-right: 30px;
+}
+.nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 30px;
+}
+.nav ul li a {
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+}
+.nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    transition: 0.5s;
+}
+.nav ul li a:hover::after {
+    width: 50%;
+}
+
+
+
+
+/* Container */
+.container {
+    text-align: center;
+}
+.container h1{
+    z-index: 1;
+    font-family: 'poppins', 'sans-serif';
+}
+.container h1{
+    text-shadow: 1px 0px 20px rgba(1, 141, 176, 0.463);
+    font-size: 160px;
+    color: #fff;
+    font-weight: 600;
+    padding: 10px;
+    font-family: 'poppins', 'sans-serif';
+    -webkit-text-stroke: 2px #fff;
+    color: transparent;
+    background-image: url(/CODEE/lemon/back.png);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
+    cursor: pointer;
+}
+.container h2{
+    position: relative;
+    top: -150px;
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+    text-shadow: 1px 0px 10px rgb(1, 240, 228);
+    transition: 1s;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+}
+.container h2:hover {
+    color: aqua;
+}
+@keyframes back{
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+.container a{
+    position: relative;
+    top: -100px;
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+    border: 2px solid #fff;
+    border-radius: 100px;
+    padding: 5px 40px;
+    text-shadow: 1px 0px 20px rgb(0, 0, 0);
+    font-family: 'Poppins', sans-serif;
+    transition: 0.5s;
+}
+.container a:hover {
+    text-shadow: none;
+    color: #ccc;
+}
+
+/* AUDIO */
+
+.container audio{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 50px;
+}
+
+
+/* BACK - VIDEO */
+
+.back-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+}
+
+.over-lay {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 53, 53);
+    mix-blend-mode: overlay;
+    z-index: -1;
+}
+/* SIZE - ADJUST PAGE */
+
+@media (min-aspect-ratio: 16/9) {
+    .back-video {
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio: 16/9) {
+    .back-video {
+        width: auto;
+        height: 100%;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .container h1{
+        text-shadow: 1px 0px 20px rgba(1, 141, 176, 0.463);
+        font-size: 70px;
+        color: #fff;
+        font-weight: 500;
+        margin: 300px auto;
+        padding: 0px;
+        font-family: 'poppins', 'sans-serif';
+        -webkit-text-stroke: 2px #fff;
+        color: transparent;
+        background-image: url(/CODEE/lemon/back.png);
+        -webkit-background-clip: text;
+        background-position: 0 0;
+        animation: back 20s linear infinite;
+    }
+    .container h2{
+        text-align: center;
+        color: #fff;
+        font-size: 20px;
+        text-shadow: 1px 0px 10px rgb(1, 240, 228);
+        transition: 1s;
+        cursor: pointer;
+        font-family: 'Poppins', sans-serif;
+        text-transform: uppercase;
+    }
+    .container a{
+        left: 150px auto;
+        text-decoration: none;
+        text-align: center;
+        color: #fff;
+        font-size: 20px;
+        border: 2px solid #fff;
+        border-radius: 100px;
+        padding: 5px 40px;
+        text-shadow: 1px 0px 20px rgb(0, 0, 0);
+        font-family: 'Poppins', sans-serif;
+        transition: 0.5s;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .container h1{
+        text-shadow: 1px 0px 20px rgba(1, 141, 176, 0.463);
+        font-size: 70px;
+        color: #fff;
+        font-weight: 500;
+        margin: 300px auto;
+        padding: 0px;
+        font-family: 'poppins', 'sans-serif';
+        -webkit-text-stroke: 2px #fff;
+        color: transparent;
+        background-image: url(/CODEE/lemon/back.png);
+        -webkit-background-clip: text;
+        background-position: 0 0;
+        animation: back 20s linear infinite;
+    }
+    .container h2{
+        position: absolute;
+        text-align: center;
+        left: 35px;
+        top: 800px;
+        color: #fff;
+        font-size: 20px;
+        text-shadow: 1px 0px 10px rgb(1, 240, 228);
+        transition: 1s;
+        cursor: pointer;
+        font-family: 'Poppins', sans-serif;
+        text-transform: uppercase;
+    }
+    .container a{
+        position: absolute;
+        top: 870px;
+        left: 130px ;
+        text-decoration: none;
+        text-align: center;
+        color: #fff;
+        font-size: 20px;
+        border: 2px solid #fff;
+        border-radius: 100px;
+        padding: 5px 40px;
+        text-shadow: 1px 0px 20px rgb(0, 0, 0);
+        font-family: 'Poppins', sans-serif;
+        transition: 0.5s;
+    }
+    
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>About</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" type="text/css" href="/CODEE/first-site/CODE/style3Dsheet.css">
+</head>
+<body>
+    
+    
+    <section class="socialMedia">
+
+        <div class="nav">
+            <ul> 
+                <li>
+                    <a href="/CODEE/first-site/CODE/index.html">Home
+                        <div class="portofolio-logo-background-home-button" style="background-image:url(icon_site/home1.jpg);"></div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <ul class="sci">
+            <li data-text="Youtube" data-color="red">
+                <a href="https://www.youtube.com/@DetronArmy/featured" class="youtube">
+                    <i class="fa fa-youtube" aria-hidden="true"></i>
+                </a>
+            </li>
+
+            <li data-text="Spotify" data-color="green">
+                <a href="https://open.spotify.com/artist/5wq1bJbz3IrbfPdFvpvGnD?si=1GR0ZCLwSVy5OkR0xLthOQ" class="spotify">
+                    <i class="fa fa-spotify" aria-hidden="true"></i>
+                </a>
+            </li>
+            
+            <li data-text="Instagram" data-color="#fc17fc">
+                <a href="https://www.instagram.com/emilian_gala/" class="instagram">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <script>
+        let list = document.querySelectorAll('.sci li');
+        let bg = document.querySelector('.socialMedia');
+        list.forEach(elements => {
+            elements.addEventListener('mouseenter', function
+            (event) {
+                let color = event.target.getAttribute
+                ('data-color');
+                bg.style.backgroundColor = color;
+            })
+        })
+    </script>
+</body>
+</html>
